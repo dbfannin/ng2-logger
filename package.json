@@ -1,8 +1,8 @@
 {
   "name": "ng2.logger",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simple Logger for angular 2",
-  "main": "dist/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run lint && npm run prepublish",
