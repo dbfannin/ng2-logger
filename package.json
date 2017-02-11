@@ -1,0 +1,45 @@
+{
+  "name": "ng2-logger",
+  "version": "0.0.1",
+  "description": "Simple Logger for angular 2",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbfannin/ng2-logger.git"
+  },
+  "keywords": [
+    "angular2",
+    "logger",
+    "logging"
+  ],
+  "author": "David Fannin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dbfannin/ng2-logger/issues"
+  },
+  "typings": "./src/ng2-logger.d.ts",
+  "homepage": "https://github.com/dbfannin/ng2-logger#readme",
+  "dependencies": {
+    "@angular/common": "^2.4.7",
+    "@angular/core": "^2.4.7",
+    "@angular/http": "^2.4.7",
+    "moment": "^2.17.1"
+  },
+  "devDependencies": {
+    "@angular/compiler": "^2.4.7",
+    "@angular/compiler-cli": "^2.4.7",
+    "@angular/platform-browser": "^2.4.7",
+    "@angular/platform-browser-dynamic": "^2.4.7",
+    "@types/jasmine": "^2.5.42",
+    "@types/node": "^7.0.5",
+    "@types/source-map": "^0.5.0",
+    "@types/webpack": "^2.2.5",
+    "rxjs": "^5.1.0",
+    "typescript": "^2.1.6",
+    "zone.js": "^0.7.6"
+  }
+}
