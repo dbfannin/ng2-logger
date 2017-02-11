@@ -2,10 +2,15 @@
   "name": "ng2-logger",
   "version": "0.0.1",
   "description": "Simple Logger for angular 2",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "tsc"
+    "build": "npm run lint && npm run prepublish",
+    "clean": "rimraf node_modules && rimraf dist",
+    "clean:dist": "rimraf dist",
+    "lint": "tslint -c tslint.json 'modules/**/*.ts'",
+    "prebuild": "npm run clean:dist",
+    "prepublish": "ngc"
   },
   "repository": {
     "type": "git",
@@ -38,7 +43,9 @@
     "@types/node": "^7.0.5",
     "@types/source-map": "^0.5.0",
     "@types/webpack": "^2.2.5",
+    "rimraf": "^2.5.4",
     "rxjs": "^5.1.0",
+    "tslint": "^4.4.2",
     "typescript": "^2.1.6",
     "zone.js": "^0.7.6"
   }

@@ -1,8 +1,10 @@
 # Created by .ignore support plugin (hsz.mobi)
 
-src/**/*
-!src/**/*.ts
+dist/
 
+
+src/**/*.ngfactory.ts
+src/**/*.ngsummary.json
 
 **/node_modules
 .idea
