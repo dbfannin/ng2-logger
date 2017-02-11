@@ -1,7 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
 
+src/**/*
+!src/**/*.ts
+
 
 **/node_modules
 .idea
-!src/**/*.js
 **/npm-debug.log
