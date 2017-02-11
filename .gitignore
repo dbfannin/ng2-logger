@@ -1,11 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
 
-dist/
-
-
-src/**/*.ngfactory.ts
-src/**/*.ngsummary.json
-
+dist
 **/node_modules
 .idea
 **/npm-debug.log

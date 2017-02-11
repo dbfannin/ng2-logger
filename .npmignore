@@ -1,9 +1,10 @@
 
 
 
-**/*.ts
-!**/*.d.ts
+index.d.ts
+index.ts
+src
+
 **/node_modules
 .idea
 **/npm-debug.log
-src
