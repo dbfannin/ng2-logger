@@ -1,5 +1,5 @@
 {
-  "name": "ng2-logger",
+  "name": "ng2.logger",
   "version": "0.0.1",
   "description": "Simple Logger for angular 2",
   "main": "dist/index.js",

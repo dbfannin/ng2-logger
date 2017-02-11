@@ -14,12 +14,12 @@ NG2 Logger is a simple logging module for angular 2. It allows "pretty print" to
 
 ## Installation
 ```shell
-npm install --save @ng2-logger
+npm install --save ng2.logger
 ```
 
 Once installed you need to import our main module:
 ```js
-import { LoggerModule } from 'ng2-logger';
+import { LoggerModule } from 'ng2.logger';
 ```
 
 The only remaining part is to list the imported module in your application module, passing in a config to intialize the logger.
@@ -40,7 +40,7 @@ To use the Logger, you will need import it locally, then call one of the logging
 
 ```js
 import { Component } from '@angular/core';
-import { NG2Logger } from 'ng2-logger';
+import { ng2.logger } from 'ng2.logger';
 
 @Component({
   selector: 'your-component',
@@ -48,7 +48,7 @@ import { NG2Logger } from 'ng2-logger';
   styleUrls: ['your.component.less']
 })
 export class YourComponent {
-    constructor(private logger: NG2Logger) {
+    constructor(private logger: ng2.logger) {
         this.logger.debug('Your log message goes here');
     };
 }
