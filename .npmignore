@@ -1,9 +1,9 @@
 
 
 
-index.d.ts
-index.ts
-src
+/index.d.ts
+/index.ts
+/src
 
 **/node_modules
 .idea
