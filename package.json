@@ -1,11 +1,11 @@
 {
   "name": "ng2.logger",
-  "version": "0.0.9",
+  "version": "1.0.0",
   "description": "Simple Logger for angular 2",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run clean:dist && npm run lint && ngc && cp ./package.json dist",
+    "build": "npm run clean:dist && npm run lint && ngc && cp ./package.json dist && cp ./README.md dist",
     "clean": "rimraf node_modules && rimraf dist",
     "clean:dist": "rimraf dist",
     "lint": "tslint -c tslint.json 'modules/**/*.ts'",
@@ -39,6 +39,7 @@
     "@angular/compiler-cli": "^2.4.7",
     "@angular/platform-browser": "^2.4.7",
     "@angular/platform-browser-dynamic": "^2.4.7",
+    "@types/core-js": "^0.9.35",
     "@types/jasmine": "^2.5.42",
     "@types/node": "^7.0.5",
     "@types/source-map": "^0.5.0",

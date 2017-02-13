@@ -8,6 +8,7 @@ import 'rxjs/add/operator/catch';
 export class LoggerConfig {
   level: string;
   serverLoggingUrl: string;
+  serverLogLevel: string;
 }
 
 enum Levels {
@@ -27,6 +28,9 @@ export class NG2Logger{
 
   private _logOnServer(level: string, message: string) {
     if(!this.options.serverLoggingUrl) return;
+
+    //if the user provides a serverLogLevel and the current level is than that do not log
+    if (this.options.serverLogLevel && Levels[level] < Levels[this.options.serverLogLevel]) return;
 
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
