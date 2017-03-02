@@ -55,9 +55,9 @@ export class YourComponent {
 ## Config Options
  * serverLogLevel - Only sends logs to the server for the level specified or higher
  * serverLoggingUrl - URL to POST logs
- * level: The log level. The app will only log message for that level or higher
+ * level: The log level. The app will only log message for that level or higher (OFF disables the logger)
 ```
-TRACE|DEBUG|INFO|LOG|WARN|ERROR
+TRACE|DEBUG|INFO|LOG|WARN|ERROR|OFF
 ```
 
 

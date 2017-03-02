@@ -17,31 +17,32 @@ enum Levels {
   'INFO',
   'LOG',
   'WARN',
-  'ERROR'
+  'ERROR',
+  'OFF'
 }
 
 @Injectable()
-export class NG2Logger{
+export class NG2Logger {
 
   constructor(private http: Http, @Optional() private options: LoggerConfig) {
   }
 
   private _logOnServer(level: string, message: string) {
-    if(!this.options.serverLoggingUrl) return;
+    if (!this.options.serverLoggingUrl) return;
 
     //if the user provides a serverLogLevel and the current level is than that do not log
     if (this.options.serverLogLevel && Levels[level] < Levels[this.options.serverLogLevel]) return;
 
-    let headers = new Headers({ 'Content-Type': 'application/json' });
-    let options = new RequestOptions({ headers: headers });
+    let headers = new Headers({'Content-Type': 'application/json'});
+    let options = new RequestOptions({headers: headers});
 
     this.http.post(this.options.serverLoggingUrl, {level: level, message: message}, options)
-      .map(res => res.json())
-      .catch(error => error)
-      .subscribe(
-        res => null,
-        error => this._log('ERROR', 'FAILED TO LOG ON SERVER', false)
-      );
+        .map(res => res.json())
+        .catch(error => error)
+        .subscribe(
+            res => null,
+            error => this._log('ERROR', 'FAILED TO LOG ON SERVER', false)
+        );
 
   }
 
@@ -66,14 +67,17 @@ export class NG2Logger{
       case 'ERROR':
         color1 = 'red';
         break;
+      case 'OFF':
+      default:
+        return;
     }
 
     //if the log level is greater than the environ
-    if (Levels[level] >= Levels[this.options.level]){
+    if (Levels[level] >= Levels[this.options.level]) {
       console.log(`%c${moment.utc().format()} [${level}] %c${message}`, `color:${color1}`, 'color:black');
 
 
-      if(logOnServer){
+      if (logOnServer) {
         this._logOnServer(level, message);
       }
     }
