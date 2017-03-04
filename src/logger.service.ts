@@ -8,7 +8,7 @@ import 'rxjs/add/operator/catch';
 export class LoggerConfig {
   level: string;
   serverLoggingUrl?: string;
-  serverLogLevel: string;
+  serverLogLevel?: string;
 }
 
 enum Levels {
