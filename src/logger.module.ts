@@ -13,11 +13,11 @@ import {NG2Logger, LoggerConfig} from './logger.service';
 })
 
 export class LoggerModule {
-  static forRoot(config: LoggerConfig): ModuleWithProviders {
+  static forRoot(config: LoggerConfig | null | undefined): ModuleWithProviders {
     return {
       ngModule: LoggerModule,
       providers: [
-        {provide: LoggerConfig, useValue: config},
+        {provide: LoggerConfig, useValue: config || {}},
       ]
     };
   }
